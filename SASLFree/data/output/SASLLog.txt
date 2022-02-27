@@ -1,0 +1,12 @@
+[727COMMANDS INFO]: Initializing...
+[727COMMANDS INFO]: Path to module: I:\SteamLibrary/steamapps/common/X-Plane 11/Aircraft/_FJS_727_Series_Pro_200F_V3.31/plugins/SASLFree/data/modules/main.lua
+[727COMMANDS INFO]: Loading module...
+[727COMMANDS INFO]: [LUA]: loading	module
+[727COMMANDS INFO]: [LUA]: loading	toggle
+[727COMMANDS INFO]: [LUA]: loading	rotary
+[727COMMANDS INFO]: [LUA]: loading	momentary
+[727COMMANDS INFO]: Module loaded
+[727COMMANDS WARN]: Enable/disable aircraft 3D panel usage explicitly (sasl.options.setAircraftPanelRendering)
+[727COMMANDS WARN]: Enable/disable 3D rendering explicitly (sasl.options.set3DRendering)
+[727COMMANDS WARN]: Enable/disable interactivity option explicitly (sasl.options.setInteractivity)
+[727COMMANDS INFO]: Disabling...
