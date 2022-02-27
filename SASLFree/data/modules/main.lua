@@ -155,6 +155,13 @@ components = {
         command2 = "FJS/727/fe_panel/eng_2_right_bleed_close",
         description2 = "Place the Engine #2 Right Bleed in CLOSE",
     },
+    toggle {
+        dataref = "FJS/727/bleed/FltGndSwitch",
+        command1 = "FJS/727/fe_panel/press_flt",
+        description1 = "Place the Pressurization Switch in FLT",
+        command2 = "FJS/727/fe_panel/press_gnd",
+        description2 = "Place the Pressurization Switch in GND",
+    },
     rotary {
         dataref = "FJS/727/bleed/AutoFlightAltKnob",
         command1 = "FJS/727/fe_panel/flt_alt_cw",
@@ -450,5 +457,28 @@ components = {
         description2 = "Places the Landing Gear Switch in OFF",
         command3 = "FJS/727/mip/gear_dn",
         description3 = "Places the Landing Gear Switch in DN",
-    }
+    },
+    pumps {
+        datarefs = {"FJS/727/fuel/pumpSwitch1Aft", "FJS/727/fuel/pumpSwitch1Fwd"},
+        command1 = "FJS/727/fe_panel/eng_1_pumps_on",
+        description1 = "Place the #1 Engine Fuel Pumps in ON",
+        command2 = "FJS/727/fe_panel/eng_1_pumps_off",
+        description2 = "Place the #1 Engine Fuel Pumps in OFF",
+    },
+    pumps {
+        datarefs = {
+            "FJS/727/fuel/pumpSwitch2FwdL", "FJS/727/fuel/pumpSwitch2AftL",
+            "FJS/727/fuel/pumpSwitch2FwdR", "FJS/727/fuel/pumpSwitch2AftR"},
+        command1 = "FJS/727/fe_panel/eng_2_pumps_on",
+        description1 = "Place the #2 Engine Fuel Pumps in ON",
+        command2 = "FJS/727/fe_panel/eng_2_pumps_off",
+        description2 = "Place the #2 Engine Fuel Pumps in OFF",
+    },
+    pumps {
+        datarefs = {"FJS/727/fuel/pumpSwitch3Aft", "FJS/727/fuel/pumpSwitch3Fwd"},
+        command1 = "FJS/727/fe_panel/eng_3_pumps_on",
+        description1 = "Place the #3 Engine Fuel Pumps in ON",
+        command2 = "FJS/727/fe_panel/eng_3_pumps_off",
+        description2 = "Place the #3 Engine Fuel Pumps in OFF",
+    },
 }

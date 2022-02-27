@@ -8,6 +8,7 @@
 [727COMMANDS INFO]: [LUA]: loading	tristate
 [727COMMANDS INFO]: [LUA]: loading	altKnob
 [727COMMANDS INFO]: [LUA]: loading	gearKnob
+[727COMMANDS INFO]: [LUA]: loading	pumps
 [727COMMANDS INFO]: Module loaded
 [727COMMANDS WARN]: Enable/disable aircraft 3D panel usage explicitly (sasl.options.setAircraftPanelRendering)
 [727COMMANDS WARN]: Enable/disable 3D rendering explicitly (sasl.options.set3DRendering)
