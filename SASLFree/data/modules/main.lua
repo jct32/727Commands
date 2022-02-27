@@ -441,4 +441,14 @@ components = {
         min = 0,
         max = 42000,
     },
+    gearKnob {
+        dataref1 = "FJS/727/Hyd/GearHandlePosition",
+        dataref2 = "sim/cockpit2/controls/gear_handle_down",
+        command1 = "FJS/727/mip/gear_up",
+        description1 = "Places the Landing Gear Switch in UP",
+        command2 = "FJS/727/mip/gear_off",
+        description2 = "Places the Landing Gear Switch in OFF",
+        command3 = "FJS/727/mip/gear_dn",
+        description3 = "Places the Landing Gear Switch in DN",
+    }
 }
