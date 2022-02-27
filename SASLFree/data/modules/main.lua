@@ -161,8 +161,8 @@ components = {
         description1 = "Rotate the FLT ALT Clockwise",
         command2 = "FJS/727/fe_panel/flt_alt_ccw",
         description2 = "Rotate the FLT ALT Counter Clockwise",
-        min = 42,
-        max = 0,
+        min = 0,
+        max = 42,
     },
     rotary {
         dataref = "FJS/727/bleed/AutoLandAltKnob1000",
