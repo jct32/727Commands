@@ -1,2 +1,11 @@
 releases/
 .vscode/
+SASLFree/64
+SASLFree/liblinux
+SASLFree/changelog.txt
+SASLFree/License
+SASLFree/version.txt
+SASLFree/data/output
+SASLFree/data/api
+SASLFree/data/init
+SASLFree/data/components
