@@ -3,6 +3,7 @@ releases/
 SASLFree/64
 SASLFree/liblinux
 SASLFree/changelog.txt
+SASLFree/functions.txt
 SASLFree/License
 SASLFree/version.txt
 SASLFree/data/output
@@ -14,3 +15,4 @@ SASLFree/data/modules/configuration/widgetResources
 SASLFree/data/modules/configuration/readme.txt
 SASLFree/data/modules/configuration/wprefs.ini
 SASLFree/data/modules/state.txt
+SASLFree/data/modules/Custom Module/readme.txt
