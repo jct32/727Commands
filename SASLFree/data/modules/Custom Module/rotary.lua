@@ -21,7 +21,7 @@ function decreaseCommandHandler(phase)
             set(dataref, get(dataref)-1)
         end
     end
-    return 1
+    return 0
 end
 
 onCommand = sasl.createCommand(command1, description1)

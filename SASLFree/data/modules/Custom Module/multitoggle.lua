@@ -6,8 +6,8 @@ description2 = get(description2)
 
 function onCommandHandler(phase)
     if phase == SASL_COMMAND_END then
-        for pump = 1, #datarefs do
-            set(globalPropertyf(datarefs[pump]), 1)
+        for toggle = 1, #datarefs do
+            set(globalPropertyf(datarefs[toggle]), 1)
         end
     end
     return 0
@@ -15,8 +15,8 @@ end
 
 function offCommandHandler(phase)
     if phase == SASL_COMMAND_END then
-        for pump = 1, #datarefs do
-            set(globalPropertyf(datarefs[pump]), 0)
+        for toggle = 1, #datarefs do
+            set(globalPropertyf(datarefs[toggle]), 0)
         end
     end
     return 0

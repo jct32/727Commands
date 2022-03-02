@@ -1,4 +1,16 @@
 ----------------------------------------------------------
+v1.3.0
+----------------------------------------------------------
+
+- Added GEN 1, 2, and 3 CLOSE comamnds
+- Renamed the pump function to multitoggle
+- Added All Window Heat ON and OFF commands
+- Added Duct Overheat Reset command
+- Added Autobrake CW and CCW commands
+- Added Gear Horn CUTOUT and NORMAL commands
+- Added all Baro CW and CCW commands
+
+----------------------------------------------------------
 v1.2.0
 ----------------------------------------------------------
 

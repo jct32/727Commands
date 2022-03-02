@@ -207,6 +207,27 @@ components = {
         min = 0,
         max = 100,
     },
+    momentary {
+        dataref = "FJS/727/Elec/GenSwitch1",
+        command = "FJS/727/fe_panel/gen_1_close",
+        description = "Places the #1 Engine Generator Switch in CLOSE when held and back to neutral when released",
+        initial = 1,
+        final = 0,
+    },
+    momentary {
+        dataref = "FJS/727/Elec/GenSwitch2",
+        command = "FJS/727/fe_panel/gen_2_close",
+        description = "Places the #1 Engine Generator Switch in CLOSE when held and back to neutral when released",
+        initial = 1,
+        final = 0,
+    },
+    momentary {
+        dataref = "FJS/727/Elec/GenSwitch3",
+        command = "FJS/727/fe_panel/gen_3_close",
+        description = "Places the #1 Engine Generator Switch in CLOSE when held and back to neutral when released",
+        initial = 1,
+        final = 0,
+    },
     toggle {
         dataref = "FJS/727/lights/LogoLightSwitch",
         command1 = "FJS/727/overhead/logo_light_on",
@@ -458,14 +479,14 @@ components = {
         command3 = "FJS/727/mip/gear_dn",
         description3 = "Places the Landing Gear Switch in DN",
     },
-    pumps {
+    multitoggle {
         datarefs = {"FJS/727/fuel/pumpSwitch1Aft", "FJS/727/fuel/pumpSwitch1Fwd"},
         command1 = "FJS/727/fe_panel/eng_1_pumps_on",
         description1 = "Place the #1 Engine Fuel Pumps in ON",
         command2 = "FJS/727/fe_panel/eng_1_pumps_off",
         description2 = "Place the #1 Engine Fuel Pumps in OFF",
     },
-    pumps {
+    multitoggle {
         datarefs = {
             "FJS/727/fuel/pumpSwitch2FwdL", "FJS/727/fuel/pumpSwitch2AftL",
             "FJS/727/fuel/pumpSwitch2FwdR", "FJS/727/fuel/pumpSwitch2AftR"},
@@ -474,11 +495,55 @@ components = {
         command2 = "FJS/727/fe_panel/eng_2_pumps_off",
         description2 = "Place the #2 Engine Fuel Pumps in OFF",
     },
-    pumps {
+    multitoggle {
         datarefs = {"FJS/727/fuel/pumpSwitch3Aft", "FJS/727/fuel/pumpSwitch3Fwd"},
         command1 = "FJS/727/fe_panel/eng_3_pumps_on",
         description1 = "Place the #3 Engine Fuel Pumps in ON",
         command2 = "FJS/727/fe_panel/eng_3_pumps_off",
         description2 = "Place the #3 Engine Fuel Pumps in OFF",
+    },
+    multitoggle {
+        datarefs = {
+            "FJS/727/bleed/WindowHeatL1Switch", "FJS/727/bleed/WindowHeatR1Switch",
+            "FJS/727/bleed/WindowHeatL2Switch", "FJS/727/bleed/WindowHeatR2Switch",
+        },
+        command1 = "FJS/727/overhead/window_heat_on",
+        description1 = "Place the Window Heat switches in ON",
+        command2 = "FJS/727/overhead/window_heat_off",
+        description2 = "Place the Window Heat switches in OFF",
+    },
+    momentary {
+        dataref = "FJS/727/bleed/DuctOverheatResetButton",
+        command = "FJS/727/fe_panel/duct_overheat_reset",
+        description = "Press the Duct Overheat reset button",
+        initial = 1,
+        final = 0,
+    },
+    rotary {
+        dataref = "FJS/727/Hyd/AutoBrakeKnob",
+        command1 = "FJS/727/overhead/autobrake_cw",
+        description1 = "Rotate the AUTOBRAKE Switch Clockwise",
+        command2 = "FJS/727/overhead/autobrake_ccw",
+        description2 = "Rotate the AUTOBRAKE Switch Counter Clockwise",
+        min = -1,
+        max = 3,
+    },
+    toggle {
+        dataref = "FJS/727/Hyd/Gear_HORN_CUTOUT_PULL_lever_Trig",
+        command1 = "FJS/727/pedestal/gear_horn_cutout_pulled",
+        description1 = "Places the Gear Horn in CUTOUT",
+        command2 = "FJS/727/pedestal/gear_horn_cutout_pushed",
+        description2 = "Places the Gear Horn in NORMAL",
+    },
+    baroSetting {
+        dataref1 = "FJS/727/Inst/StbyBaroKnob",
+        dataref2 = "sim/cockpit/misc/barometer_setting",
+        dataref3 = "sim/cockpit/misc/barometer_setting2",
+        command1 = "FJS/727/mip/baro_cw",
+        description1 = "Rotate the Altimeter Knob Clockwise",
+        command2 = "FJS/727/mip/baro_ccw",
+        description2 = "Rotate the Altimeter Knob Counter Clockwise",
+        min = 2800,
+        max = 3100,
     },
 }
