@@ -7,14 +7,20 @@ command2 = get(command2)
 description2 = get(description2)
 max = get(max)
 min = get(min)
-commandValue = 0
+startTime = 0
 
 function increaseCommandHandler(phase)
-    if phase == SASL_COMMAND_END then
-        commandValue = 0
-    elseif phase == SASL_COMMAND_CONTINUE then
-        commandValue = commandValue + 1
-        if ((get(dataref1) < max) and (commandValue % 3 == 0)) then
+    if phase == SASL_COMMAND_CONTINUE then
+        if ((get(dataref1) < max) and (os.clock()-startTime >= 0.2)) then
+            baro = get(dataref1) + 1
+            set(dataref1, baro)
+            set(dataref2, baro/100)
+            set(dataref3, baro/100)
+            startTime = os.clock()
+        end
+    elseif phase == SASL_COMMAND_BEGIN then
+        if get(dataref1) < max then
+            startTime = os.clock()
             baro = get(dataref1) + 1
             set(dataref1, baro)
             set(dataref2, baro/100)
@@ -25,11 +31,18 @@ function increaseCommandHandler(phase)
 end
 
 function decreaseCommandHandler(phase)
-    if phase == SASL_COMMAND_END then
-        commandValue = 0
-    elseif phase == SASL_COMMAND_CONTINUE then
-        commandValue = commandValue - 1
-        if ((get(dataref1) > min) and (commandValue % 3 == 0)) then
+    if phase == SASL_COMMAND_CONTINUE then
+        if ((get(dataref1) > min) and (os.clock()-startTime >= 0.2)) then
+            print("Should be here")
+            baro = get(dataref1) - 1
+            set(dataref1, baro)
+            set(dataref2, baro/100)
+            set(dataref3, baro/100)
+            startTime = os.clock()
+        end
+    elseif phase == SASL_COMMAND_BEGIN then
+        if get(dataref1) > min then
+            startTime = os.clock()
             baro = get(dataref1) - 1
             set(dataref1, baro)
             set(dataref2, baro/100)
